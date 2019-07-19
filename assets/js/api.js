@@ -16,7 +16,7 @@ function citySubmit() {
 }*/
 
 citySubmit();
-project();
+/*project();*/
 
 function initMap() {
     var uluru = {lat: -25.344, lng: 131.036};
