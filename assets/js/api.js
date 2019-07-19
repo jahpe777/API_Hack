@@ -9,11 +9,11 @@ function citySubmit() {
     });
 }
 
-/*function project() {
+function project() {
     $(".project").click(function(event) {
         location.href = 'https://jahpe777.github.io/Quiz_App/';
     });
-}*/
+}
 
 citySubmit();
 project();

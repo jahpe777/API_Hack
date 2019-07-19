@@ -5,7 +5,7 @@
 }
 
 body {
-    background: url("/Users/jahpe777/Projects/API_Hack/Climate_Change_Background.jpg") no-repeat fixed center;
+    background: url("../../Climate_Change_Background.jpg") no-repeat fixed center;
     background-size: cover;
 }
 
