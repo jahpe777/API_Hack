@@ -12,12 +12,13 @@ function citySubmit() {
 
 //click event for pins
 //add listener
-function pinClick() { 
-google.maps.event.addListener(marker, "click", function(event) {
-    var latitude = event.latLng.lat();
-    var longitude = event.latLng.lng();
-    console.log( latitude + ', ' + longitude );
-}); //end addListener
+function pinClick(marker) { 
+    console.log('clicked')
+    google.maps.event.addListener(marker, "click", function(event) { // this needs the marker to listen
+        var latitude = event.latLng.lat();
+        var longitude = event.latLng.lng();
+        console.log( latitude + ', ' + longitude );
+    }); //end addListener
 }
 
 /*function project() {
@@ -28,7 +29,7 @@ google.maps.event.addListener(marker, "click", function(event) {
 
 
 citySubmit();
-pinClick();
+
 /*project();*/
 
 
@@ -51,7 +52,9 @@ function initMap() {
                                                 lng: city.geometry.coordinates[0]}, 
                                                 map: map
                                             });
+        pinClick(marker); // pass each marker to the pin click function to set the listener                                    
     }
+    
   var marker = new google.maps.Marker({position: coordinates, map: map});
   };
 
