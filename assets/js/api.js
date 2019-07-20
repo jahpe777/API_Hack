@@ -10,41 +10,54 @@ function citySubmit() {
     });
 }
 
+function latLngSubmit() {
+    google.maps.event.addListener(marker, "click", function() { 
+        alert("works");
+        event.preventDefault();
+        $(".tempModal").css("display", "flex");
+    });
+    $(".close").click(function(event) {
+        event.preventDefault();
+        $(".tempModal").css("display","none");
+    });
+}
+
 //click event for pins
 //add listener
 function pinClick(marker) { 
-    console.log('clicked')
+    console.log("clicked")
     google.maps.event.addListener(marker, "click", function(event) { // this needs the marker to listen
         var latitude = event.latLng.lat();
         var longitude = event.latLng.lng();
-        console.log( latitude + ', ' + longitude );
+        console.log( latitude + ", " + longitude );
     }); //end addListener
 }
 
-/*function project() {
-    $(".project").click(function(event) {
-        location.href = 'https://jahpe777.github.io/Quiz_App/';
-    });
-}*/
-
 
 citySubmit();
+latLngSubmit();
 
-/*project();*/
 
+/*function displayResults(responseJson) {
+    console.log(responseJson);
+    $("#js-results-list").empty();
+      $("#js-results-list").append(
+        <h3>${responseJson.data.tasmax}</h3>
+      )};  */
 
-//kelvin to fahrenheit
-const kelvin = prompt('What is the Kelvin temperature today?');
+      
+/*//kelvin to fahrenheit
+const kelvin = prompt("What is the Kelvin temperature today?");
 const celsius = kelvin -273;
 
 let fahrenheit = Math.floor(celsius * (9/5) + 32);
-console.log(`The temperature is ${fahrenheit} degrees fahrenheit.`);
+console.log(`The temperature is ${fahrenheit} degrees fahrenheit.`);*/
 
 
 function initMap() {
     var coordinates = {lat: cities[0].geometry.coordinates[1], lng: cities[0].geometry.coordinates[0]};
     var map = new google.maps.Map(
-        document.getElementById('map'), {zoom: 4, center: coordinates});
+        document.getElementById("map"), {zoom: 3, center: coordinates});
     for (let city of cities) {
         console.log(city)
         var marker = new google.maps.Marker({position: {
@@ -59,7 +72,7 @@ function initMap() {
   };
 
 
-  fetch(`https://app.climate.azavea.com/api/climate-data/${cities[0].geometry.coordinates[1]}/${cities[0].geometry.coordinates[0]}/RCP85?dataset=LOCA`, { headers: { Authorization: 'token 8428d0e3ca7a3f5862681ad13cb428d7e6f77a9d'}})  
+  fetch(`https://app.climate.azavea.com/api/climate-data/${cities[0].geometry.coordinates[1]}/${cities[0].geometry.coordinates[0]}/RCP85?dataset=LOCA`, { headers: { Authorization: "token 8428d0e3ca7a3f5862681ad13cb428d7e6f77a9d"}})  
     .then(function(response) {
         return response.json();
       })
