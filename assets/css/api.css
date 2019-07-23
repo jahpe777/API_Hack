@@ -22,7 +22,7 @@ header {
 .name {
     background: black;
     color: white;
-    width: 55rem;
+    width: 50rem;
     position: relative;
     margin-right: auto;
     margin-left: auto;
@@ -130,7 +130,7 @@ main {
 .tempContent {
     width: 50rem;
     height: 30rem;
-    background-color: white;
+    background-color: black;
     border-radius: 4rem;
     text-align: center;
     position: relative;
@@ -143,16 +143,14 @@ main {
     font-size: 4rem;
     transform: rotate(45deg);
     cursor: pointer;
+    color: white;
 }
 
-@media screen and (max-width: 1060px) {
-
+.tempTextContainer p {
+    font-size: 2.5rem;
+    margin-top: .1rem;
+    color: red;
 }
-
-@media screen and (max-width: 768px) {
-
-}
-
 
 /* LOADER 2 */
 .loader-container {
@@ -206,3 +204,11 @@ main {
       transform: translateY(-20px);
     }
   }
+
+@media screen and (max-width: 1060px) {
+
+}
+
+@media screen and (max-width: 768px) {
+
+}

@@ -47,7 +47,7 @@ citySubmit();
 //handle the search term and get the lat, lng
 function handleSubmit(lat, lng) {
     console.log('handling submit')
-    fetch(`https://app.climate.azavea.com/api/climate-data/${lat}/${lng}/RCP85?dataset=LOCA&years=2020,2030,2040,2050,2060,2070,2080,2090,2100`, {
+    fetch(`https://app.climate.azavea.com/api/climate-data/${lat}/${lng}/RCP85?dataset=LOCA&years=2019,2020,2030,2040,2050,2060,2070,2080,2090,2100`, {
             headers: {
                 Authorization: "token 8428d0e3ca7a3f5862681ad13cb428d7e6f77a9d"
             }
@@ -72,16 +72,34 @@ function getCurrentDay() {
     let oneDay = 1000 * 60 * 60 * 24;
     let day = Math.floor(diff / oneDay);
     return day
-}
+}    
+
+/*let yearArray = ["2010,2020,2030,2040,2050,2060,2070,2080,2090,2100"]
+for (let i = 0; i < yearArray.length; i++)*/
 
 function displayData(data) {
     let day = getCurrentDay()
-    let temp = data.data['2050'].tasmax[day-1]
+    let htmlString = ""
+    let keys = Object.keys(data.data)
+    for (let key of keys) {
+        htmlString += `<p>Temperature for ${key} | ${conversion(data.data[key].tasmax[day-1])}°F</p>`
+    }
+    $(".tempTextContainer").append(htmlString)
+};
+    /*let temp = data.data["2050"].tasmax[day-1]
     let kelvin = temp 
-    conversion(kelvin)
+    let fahrenheit = conversion(kelvin)
     $('.tempTextContainer').append(`
-        <h1>${kelvin}</h1>
+        <h1>${fahrenheit}</h1>
     `)
+};*/
+
+
+//kelvin to fahrenheit
+function conversion(kelvin) {
+    const celsius = kelvin -273;
+    let fahrenheit = Math.floor(celsius * (9/5) + 32);
+    return fahrenheit
 };
 
 
@@ -91,14 +109,6 @@ function displayData(data) {
       $("#js-results-list").append(
         <h3>${responseJson.data.tasmax}</h3>
       )}; */
-
-
-//kelvin to fahrenheit
-function conversion(kelvin) {
-    const celsius = kelvin -273;
-    let fahrenheit = Math.floor(celsius * (9/5) + 32);
-    return fahrenheit
-};
 
 
 function initMap() {
