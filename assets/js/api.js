@@ -2,7 +2,11 @@
 function citySubmit() {
     $(".submit").click(function (event) {
         event.preventDefault();
+        var city = 
+        $('.tempTextContainer').empty()
+        $(".loader-container").show()
         $(".tempModal").css("display", "flex");
+        handleSubmitCity(latitude, longitude);
     });
     $(".close").click(function (event) {
         event.preventDefault();
@@ -29,22 +33,31 @@ function latLngSubmit(marker) {
 }
 
 
-//click event for pins
-/*add listener
-function pinClick(marker) { 
-  //  console.log("clicked")
-    google.maps.event.addListener(marker, "click", function(event) { // this needs the marker to listen
-        var latitude = event.latLng.lat();
-        var longitude = event.latLng.lng();
-    //    console.log( latitude + ", " + longitude );
-    }); //end addListener
-}*/
+/*citySubmit();*/
+
+//handle the search term 
+function handleSubmitCity (city) {
+    console.log('handling city submit')
+    fetch(`https://app.climate.azavea.com/api/climate-data/${city}/RCP85?dataset=LOCA`, {
+            headers: {
+                Authorization: "token 8428d0e3ca7a3f5862681ad13cb428d7e6f77a9d"
+            }
+        })
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            $(".loader-container").hide()
+            displayData(data)
+        })
+        .catch(error => {
+            console.log(error)
+            alert('error fetching results')
+        })
+}
 
 
-citySubmit();
-
-
-//handle the search term and get the lat, lng
+//get the lat, lng
 function handleSubmit(lat, lng) {
     console.log('handling submit')
     fetch(`https://app.climate.azavea.com/api/climate-data/${lat}/${lng}/RCP85?dataset=LOCA&years=2019,2020,2030,2040,2050,2060,2070,2080,2090,2100`, {
@@ -65,6 +78,7 @@ function handleSubmit(lat, lng) {
         })
 }
 
+
 function getCurrentDay() {
     let now = new Date();
     let start = new Date(now.getFullYear(), 0, 0);
@@ -74,8 +88,6 @@ function getCurrentDay() {
     return day
 }    
 
-/*let yearArray = ["2010,2020,2030,2040,2050,2060,2070,2080,2090,2100"]
-for (let i = 0; i < yearArray.length; i++)*/
 
 function displayData(data) {
     let day = getCurrentDay()
@@ -86,13 +98,6 @@ function displayData(data) {
     }
     $(".tempTextContainer").append(htmlString)
 };
-    /*let temp = data.data["2050"].tasmax[day-1]
-    let kelvin = temp 
-    let fahrenheit = conversion(kelvin)
-    $('.tempTextContainer').append(`
-        <h1>${fahrenheit}</h1>
-    `)
-};*/
 
 
 //kelvin to fahrenheit
