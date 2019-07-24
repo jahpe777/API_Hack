@@ -68,7 +68,6 @@ function latLngSubmit(marker) {
 
 //handle the search term 
 function handleSubmitCity (city) {
-    console.log('handling city submit')
     fetch(`https://app.climate.azavea.com/api/climate-data/${encodeURIComponent(city)}/RCP85?dataset=LOCA&years=2019,2020,2030,2040,2050,2060,2070,2080,2090,2100`, {
             headers: {
                 Authorization: "token 8428d0e3ca7a3f5862681ad13cb428d7e6f77a9d"
@@ -90,7 +89,6 @@ function handleSubmitCity (city) {
 
 //get the lat, lng
 function handleSubmit(lat, lng) {
-    console.log('handling submit')
     fetch(`https://app.climate.azavea.com/api/climate-data/${lat}/${lng}/RCP85?dataset=LOCA&years=2019,2020,2030,2040,2050,2060,2070,2080,2090,2100`, {
             headers: {
                 Authorization: "token 8428d0e3ca7a3f5862681ad13cb428d7e6f77a9d"
@@ -104,7 +102,6 @@ function handleSubmit(lat, lng) {
             displayData(data)
         })
         .catch(error => {
-            console.log(error)
             alert('error fetching results')
         })
 }

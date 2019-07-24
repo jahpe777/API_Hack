@@ -1008,30 +1008,6 @@ const cities = [
       }
     },
     {
-      "id": 71,
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -149.90028,
-          61.21806
-        ]
-      },
-      "properties": {
-        "proximity": {
-          "ocean": true
-        },
-        "name": "Anchorage",
-        "admin": "AK",
-        "population": 298695,
-        "datasets": [
-          "LOCA",
-          "NEX-GDDP"
-        ],
-        "region": 27
-      }
-    },
-    {
       "id": 1545,
       "type": "Feature",
       "geometry": {
@@ -1293,30 +1269,6 @@ const cities = [
           "NEX-GDDP"
         ],
         "region": 18
-      }
-    },
-    {
-      "id": 1755,
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -158.03039,
-          21.33999
-        ]
-      },
-      "properties": {
-        "proximity": {
-          "ocean": true
-        },
-        "name": "¬â√õ√∑Ewa Gentry",
-        "admin": "HI",
-        "population": 22690,
-        "datasets": [
-          "LOCA",
-          "NEX-GDDP"
-        ],
-        "region": null
       }
     },
     {
@@ -7440,30 +7392,6 @@ const cities = [
       }
     },
     {
-      "id": 367,
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -147.80278,
-          64.85694
-        ]
-      },
-      "properties": {
-        "proximity": {
-          "ocean": false
-        },
-        "name": "College",
-        "admin": "AK",
-        "population": 12964,
-        "datasets": [
-          "LOCA",
-          "NEX-GDDP"
-        ],
-        "region": 43
-      }
-    },
-    {
       "id": 1599,
       "type": "Feature",
       "geometry": {
@@ -10992,30 +10920,6 @@ const cities = [
       }
     },
     {
-      "id": 708,
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -147.05442,
-          64.66327
-        ]
-      },
-      "properties": {
-        "proximity": {
-          "ocean": false
-        },
-        "name": "Eielson Air Force Base",
-        "admin": "AK",
-        "population": 2647,
-        "datasets": [
-          "LOCA",
-          "NEX-GDDP"
-        ],
-        "region": 43
-      }
-    },
-    {
       "id": 382,
       "type": "Feature",
       "geometry": {
@@ -11901,78 +11805,6 @@ const cities = [
           "NEX-GDDP"
         ],
         "region": 27
-      }
-    },
-    {
-      "id": 295,
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -158.03039,
-          21.33999
-        ]
-      },
-      "properties": {
-        "proximity": {
-          "ocean": true
-        },
-        "name": "‘Ewa Gentry",
-        "admin": "HI",
-        "population": 22690,
-        "datasets": [
-          "LOCA",
-          "NEX-GDDP"
-        ],
-        "region": null
-      }
-    },
-    {
-      "id": 1549,
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -147.71639,
-          64.83778
-        ]
-      },
-      "properties": {
-        "proximity": {
-          "ocean": false
-        },
-        "name": "Fairbanks",
-        "admin": "AK",
-        "population": 32325,
-        "datasets": [
-          "LOCA",
-          "NEX-GDDP"
-        ],
-        "region": 43
-      }
-    },
-    {
-      "id": 1397,
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -146.41667,
-          64.83333
-        ]
-      },
-      "properties": {
-        "proximity": {
-          "ocean": false
-        },
-        "name": "Fairbanks North Star Borough",
-        "admin": "AK",
-        "population": 97581,
-        "datasets": [
-          "LOCA",
-          "NEX-GDDP"
-        ],
-        "region": 42
       }
     },
     {
@@ -17088,30 +16920,6 @@ const cities = [
       }
     },
     {
-      "id": 56,
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -157.85833,
-          21.30694
-        ]
-      },
-      "properties": {
-        "proximity": {
-          "ocean": true
-        },
-        "name": "Honolulu",
-        "admin": "HI",
-        "population": 371657,
-        "datasets": [
-          "LOCA",
-          "NEX-GDDP"
-        ],
-        "region": null
-      }
-    },
-    {
       "id": 330,
       "type": "Feature",
       "geometry": {
@@ -18263,30 +18071,7 @@ const cities = [
         "region": 16
       }
     },
-    {
-      "id": 1605,
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -134.41972,
-          58.30194
-        ]
-      },
-      "properties": {
-        "proximity": {
-          "ocean": true
-        },
-        "name": "Juneau",
-        "admin": "AK",
-        "population": 32756,
-        "datasets": [
-          "LOCA",
-          "NEX-GDDP"
-        ],
-        "region": null
-      }
-    },
+    
     {
       "id": 658,
       "type": "Feature",
@@ -18381,30 +18166,6 @@ const cities = [
           "NEX-GDDP"
         ],
         "region": 40
-      }
-    },
-    {
-      "id": 1070,
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -159.70544,
-          22.01108
-        ]
-      },
-      "properties": {
-        "proximity": {
-          "ocean": true
-        },
-        "name": "Kauai County",
-        "admin": "HI",
-        "population": 67091,
-        "datasets": [
-          "LOCA",
-          "NEX-GDDP"
-        ],
-        "region": null
       }
     },
     {
@@ -18933,30 +18694,6 @@ const cities = [
           "NEX-GDDP"
         ],
         "region": 48
-      }
-    },
-    {
-      "id": 1613,
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -152.40722,
-          57.79
-        ]
-      },
-      "properties": {
-        "proximity": {
-          "ocean": true
-        },
-        "name": "Kodiak",
-        "admin": "AK",
-        "population": 6253,
-        "datasets": [
-          "LOCA",
-          "NEX-GDDP"
-        ],
-        "region": 27
       }
     },
     {
@@ -22800,30 +22537,6 @@ const cities = [
       }
     },
     {
-      "id": 1718,
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -156.61706,
-          20.86774
-        ]
-      },
-      "properties": {
-        "proximity": {
-          "ocean": true
-        },
-        "name": "Maui County",
-        "admin": "HI",
-        "population": 154834,
-        "datasets": [
-          "LOCA",
-          "NEX-GDDP"
-        ],
-        "region": null
-      }
-    },
-    {
       "id": 848,
       "type": "Feature",
       "geometry": {
@@ -23757,30 +23470,6 @@ const cities = [
           "NEX-GDDP"
         ],
         "region": 48
-      }
-    },
-    {
-      "id": 274,
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -158.00111,
-          21.45
-        ]
-      },
-      "properties": {
-        "proximity": {
-          "ocean": true
-        },
-        "name": "Mililani Town",
-        "admin": "HI",
-        "population": 27629,
-        "datasets": [
-          "LOCA",
-          "NEX-GDDP"
-        ],
-        "region": null
       }
     },
     {
@@ -28464,30 +28153,6 @@ const cities = [
       }
     },
     {
-      "id": 1757,
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -155.4786,
-          19.20297
-        ]
-      },
-      "properties": {
-        "proximity": {
-          "ocean": true
-        },
-        "name": "P¬Ä¬Åhala",
-        "admin": "HI",
-        "population": 1356,
-        "datasets": [
-          "LOCA",
-          "NEX-GDDP"
-        ],
-        "region": null
-      }
-    },
-    {
       "id": 476,
       "type": "Feature",
       "geometry": {
@@ -28533,30 +28198,6 @@ const cities = [
           "NEX-GDDP"
         ],
         "region": 18
-      }
-    },
-    {
-      "id": 917,
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -155.4786,
-          19.20297
-        ]
-      },
-      "properties": {
-        "proximity": {
-          "ocean": true
-        },
-        "name": "Pāhala",
-        "admin": "HI",
-        "population": 1356,
-        "datasets": [
-          "LOCA",
-          "NEX-GDDP"
-        ],
-        "region": null
       }
     },
     {
@@ -33144,29 +32785,6 @@ const cities = [
       }
     },
     {
-      "id": 1773,
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          145.755833,
-          15.180833
-        ]
-      },
-      "properties": {
-        "proximity": {
-          "ocean": true
-        },
-        "name": "Saipan",
-        "admin": "CNMI",
-        "population": 48220,
-        "datasets": [
-          "NEX-GDDP"
-        ],
-        "region": null
-      }
-    },
-    {
       "id": 1159,
       "type": "Feature",
       "geometry": {
@@ -35615,30 +35233,6 @@ const cities = [
       }
     },
     {
-      "id": 591,
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -151.05833,
-          60.48778
-        ]
-      },
-      "properties": {
-        "proximity": {
-          "ocean": false
-        },
-        "name": "Soldotna",
-        "admin": "AK",
-        "population": 4163,
-        "datasets": [
-          "LOCA",
-          "NEX-GDDP"
-        ],
-        "region": 27
-      }
-    },
-    {
       "id": 1645,
       "type": "Feature",
       "geometry": {
@@ -37364,30 +36958,6 @@ const cities = [
           "NEX-GDDP"
         ],
         "region": 48
-      }
-    },
-    {
-      "id": 895,
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -148.7645,
-          61.77789
-        ]
-      },
-      "properties": {
-        "proximity": {
-          "ocean": true
-        },
-        "name": "Sutton-Alpine",
-        "admin": "AK",
-        "population": 1447,
-        "datasets": [
-          "LOCA",
-          "NEX-GDDP"
-        ],
-        "region": 27
       }
     },
     {
@@ -39524,78 +39094,6 @@ const cities = [
           "NEX-GDDP"
         ],
         "region": 8
-      }
-    },
-    {
-      "id": 539,
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -159.37677,
-          22.07244
-        ]
-      },
-      "properties": {
-        "proximity": {
-          "ocean": true
-        },
-        "name": "Wailua Homesteads",
-        "admin": "HI",
-        "population": 5188,
-        "datasets": [
-          "LOCA",
-          "NEX-GDDP"
-        ],
-        "region": null
-      }
-    },
-    {
-      "id": 358,
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -157.94333,
-          21.40472
-        ]
-      },
-      "properties": {
-        "proximity": {
-          "ocean": true
-        },
-        "name": "Waimalu",
-        "admin": "HI",
-        "population": 13730,
-        "datasets": [
-          "LOCA",
-          "NEX-GDDP"
-        ],
-        "region": null
-      }
-    },
-    {
-      "id": 816,
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -159.66893,
-          21.95707
-        ]
-      },
-      "properties": {
-        "proximity": {
-          "ocean": true
-        },
-        "name": "Waimea",
-        "admin": "HI",
-        "population": 1855,
-        "datasets": [
-          "LOCA",
-          "NEX-GDDP"
-        ],
-        "region": null
       }
     },
     {
