@@ -2,11 +2,17 @@
 function citySubmit() {
     $(".submit").click(function (event) {
         event.preventDefault();
-        var city = 
+        let city = $(".city").val()
+        for (var key in cities) {
+            if (cities.hasOwnProperty(key)) {
+               console.log(cities[key].id);
+            }
+         }
+        console.log(city)
         $('.tempTextContainer').empty()
         $(".loader-container").show()
         $(".tempModal").css("display", "flex");
-        handleSubmitCity(latitude, longitude);
+        handleSubmitCity(city);
     });
     $(".close").click(function (event) {
         event.preventDefault();
@@ -14,11 +20,13 @@ function citySubmit() {
     });
 }
 
+citySubmit();
+
 //click event for markers
 function latLngSubmit(marker) {
     google.maps.event.addListener(marker, "click", function (event) {
-        var latitude = event.latLng.lat();
-        var longitude = event.latLng.lng();
+        let latitude = event.latLng.lat();
+        let longitude = event.latLng.lng();
         console.log(latitude)
         console.log(longitude)
         $('.tempTextContainer').empty()
@@ -32,13 +40,10 @@ function latLngSubmit(marker) {
     });
 }
 
-
-/*citySubmit();*/
-
 //handle the search term 
 function handleSubmitCity (city) {
     console.log('handling city submit')
-    fetch(`https://app.climate.azavea.com/api/climate-data/${city}/RCP85?dataset=LOCA`, {
+    fetch(`https://app.climate.azavea.com/api/climate-data/${encodeURIComponent(city)}/RCP85?dataset=LOCA&years=2019,2020,2030,2040,2050,2060,2070,2080,2090,2100`, {
             headers: {
                 Authorization: "token 8428d0e3ca7a3f5862681ad13cb428d7e6f77a9d"
             }
@@ -117,18 +122,18 @@ function conversion(kelvin) {
 
 
 function initMap() {
-    var coordinates = {
+    let coordinates = {
         lat: cities[0].geometry.coordinates[1],
         lng: cities[0].geometry.coordinates[0]
     };
-    var map = new google.maps.Map(
+    let map = new google.maps.Map(
         document.getElementById("map"), {
             zoom: 3,
             center: coordinates
         });
     for (let city of cities) {
         //   console.log(city)
-        var marker = new google.maps.Marker({
+        let marker = new google.maps.Marker({
             position: {
                 lat: city.geometry.coordinates[1],
                 lng: city.geometry.coordinates[0]
@@ -139,7 +144,7 @@ function initMap() {
         latLngSubmit(marker);
     }
 
-    var marker = new google.maps.Marker({
+    let marker = new google.maps.Marker({
         position: coordinates,
         map: map
     });
