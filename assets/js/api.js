@@ -136,14 +136,6 @@ function conversion(kelvin) {
 };
 
 
-/*function displayResults(responseJson) {
-    console.log(responseJson);
-    $("#js-results-list").empty();
-      $("#js-results-list").append(
-        <h3>${responseJson.data.tasmax}</h3>
-      )}; */
-
-
 function initMap() {
     let coordinates = {
         lat: cities[0].geometry.coordinates[1],
