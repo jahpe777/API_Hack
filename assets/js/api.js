@@ -2,17 +2,43 @@
 function citySubmit() {
     $(".submit").click(function (event) {
         event.preventDefault();
-        let city = $(".city").val()
-        for (var key in cities) {
-            if (cities.hasOwnProperty(key)) {
-               console.log(cities[key].id);
-            }
-         }
-        console.log(city)
+        let cityState = $(".city").val()
+        let city = cityState.split(',')[0]
+        let state = cityState.split(',')[1]
+
+        if (!city || !state) {
+            alert('Check city and state formatting')
+            return
+        }
+
         $('.tempTextContainer').empty()
         $(".loader-container").show()
         $(".tempModal").css("display", "flex");
-        handleSubmitCity(city);
+       
+        city = city.replace(/\s/g,'').toLowerCase()
+        state = state.replace(/\s/g,'').toLowerCase()
+        
+        let found;
+
+        for (let key in cities) {
+            let tempData = cities[key].properties
+            let cleanedCity = tempData.name.replace(/\s/g,'').toLowerCase()
+            let cleanedState = tempData.admin.replace(/\s/g,'').toLowerCase()
+
+            if (cleanedCity === city && cleanedState === state) {
+                found = cities[key]
+                break
+            }
+         }
+
+         if (!found) {
+            alert("Couldn't find city")
+            $(".loader-container").hide()
+            $(".tempModal").hide()
+            return
+         }
+
+         handleSubmitCity(found.id);
     });
     $(".close").click(function (event) {
         event.preventDefault();
