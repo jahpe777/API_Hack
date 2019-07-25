@@ -1,26 +1,27 @@
-API Hack Capstone - Climate Change
-An app created to display the effects of climate change. Users can enter in a city or click one of the markers within a Google map to show projected max tempuratures within the continental United States.
+<p>API Hack Capstone - Climate Change</p>
 
-Link
-https://jahpe777.github.io/API_Hack/
+<p>An app created to display the effects of climate change. Users can enter in a city or click one of the markers within a Google map to show projected max tempuratures within the continental United States.</p>
 
-Screenshots
-Landing Page:
+<p>Link</p>
+<a href = "https://jahpe777.github.io/API_Hack/"></a>
 
-login screen
+<p>Screenshots
+Landing Page:</p>
 
-Results:
+<p>login screen</p>
 
-results
+<p>Results:</p>
 
-Built With
+<p>results</p>
+
+<p>Built With
 Front-End:
 HTML
 CSS
 Javascript
-jQuery
+jQuery</p>
 
-Features
+<p>Features
 Retrieve max temperature results (in F°) for individual cities within the continental United States for the following years -
 2019
 2020
@@ -31,7 +32,7 @@ Retrieve max temperature results (in F°) for individual cities within the conti
 2070
 2080
 2090
-2100
+2100</p>
 
-Authors
-James Higgs - ** - Front-End development/testing, styling
+<p>Authors
+James Higgs - ** - Front-End development/testing, styling</p>
