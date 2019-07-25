@@ -1,7 +1,7 @@
 # API_Hack
 API Hack Capstone - Climate Change
 
-Book-Thing.IO
+<h1>Book-Thing.IO</h1>
 A community driven, book recommendation application. Users can create lists of their favorite books and have others recommended to them.
 
 Motivation
