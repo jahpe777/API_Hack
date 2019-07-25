@@ -1,74 +1,37 @@
-# API_Hack
 API Hack Capstone - Climate Change
+An app created to display the effects of climate change. Users can enter in a city or click one of the markers within a Google map to show projected max tempuratures within the continental United States.
 
-<h1>Book-Thing.IO</h1>
-A community driven, book recommendation application. Users can create lists of their favorite books and have others recommended to them.
-
-Motivation
-We wanted a book recommendation app that was community driven. Books and lists are all created by the users.
-
-Build Status
-Build Status
+Link
+https://jahpe777.github.io/API_Hack/
 
 Screenshots
-Login Screen/Landing Page:
+Landing Page:
 
 login screen
 
-About:
+Results:
 
-about
+results
 
-Library:
-
-library
-
-Recommendations:
-
-recommendations
-
-Environment Setup
-Setup your own postgress server
-Run the database_script.sql file to build your table structure
-Create a .env file in your server folder which contains the path to your database as well as your client id and secret
-Obtain a client id and secret by setting up your app with the google developers console
-Run your project with
-npm run dev
-Running the tests
-To run all tests, run
-
-npm test
-To run just the front/back end tests, run
-
-npm run test:server
-
-npm run test:client
 Built With
-Front-End
-React
-Redux
-React-Router
-Back-End
-Postgress
-Express
-Node
-Knex
-Testing
-Mocha
-Chai
-Chai-http
-Jest
+Front-End:
+HTML
+CSS
+Javascript
+jQuery
+
 Features
-Create a list of books
-Add your favorite books
-Like lists to get recommendations
-See every book currently in the library
-Demo
-Live Demo
+Retrieve max temperature results (in F°) for individual cities within the continental United States for the following years -
+2019
+2020
+2030
+2040
+2050
+2060
+2070
+2080
+2090
+2100
+
 Authors
-Sonja Duric - ** - Database design/Back-End development
-Jonathan Fitzgibbon - ** - Back-End development/testing
-Tanner Gill - ** - Front-End development/testing, styling
-Patrice White - ** - Front-End development/testing, styling
-Acknowledgments
-Ben Pardo - ** - The Great Savior, The Wise Sage
+James Higgs - ** - Front-End development/testing, styling
