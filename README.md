@@ -1,4 +1,4 @@
-<h1>API Hack Capstone - Climate Change</h1>
+<h1>API Hack Capstone - Climate Change App</h1>
 
 <p>An app created to display the effects of climate change. Users can enter in a city or click one of the markers within a Google map to show projected max tempuratures within the continental United States.</p>
 
@@ -7,16 +7,16 @@
 
 <h2>Screenshots</h2>
 
-<h3>Landing Page:</h3>
+<h4>Landing Page:</h4>
 
 <p>login screen</p>
 
-<h2>Results:</h2>
+<h4>Results:</h4>
 
 <p>results</p>
 
 <h2>Built With</h2>
-<h3>Front-End:</h3>
+<h4>Front-End:</h4>
 <ul>
   <li>HTML</li>
   <li>CSS</li>
@@ -25,7 +25,7 @@
 </ul>
 
 <h2>Features</h2>
-<p>Retrieve max temperature results (in F°) for individual cities within the continental United States for the following years</p>
+<p>Retrieve max temperature results (in F°) for individual cities within the continental United States for the following years.</p>
 <ul> 
   <li>2019</li>
   <li>2020</li>
@@ -40,4 +40,4 @@
 </ul>
 
 <h2>Authors</h2>
-<h3>James Higgs - ** - Front-End development/testing, styling</h3>
+<h4>James Higgs - Front-End Development/Testing, Styling</h4>
