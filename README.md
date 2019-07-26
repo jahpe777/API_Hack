@@ -40,4 +40,4 @@
 </ul>
 
 <h2>Authors</h2>
-<h4>James Higgs / Front-End Development/Testing, Styling</h4>
+<h4>James Higgs (Front-End Development/Testing, Styling)</h4>
