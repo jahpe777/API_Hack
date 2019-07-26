@@ -27,7 +27,6 @@ header {
     margin-right: auto;
     margin-left: auto;
     text-align: center;
-    cursor: pointer;
 }
 
 main {
@@ -46,7 +45,6 @@ main {
     margin-right: auto;
     margin-left: auto;
     text-align: center;
-    cursor: pointer;
     font-family: Verdana, sans-serif;
     font-size: 1rem;
     padding: .5rem;
@@ -142,9 +140,6 @@ main {
     font-size: 2rem;
     margin-top: .1rem;
     color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
 /* LOADER 2 */

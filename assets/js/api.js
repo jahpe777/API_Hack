@@ -143,8 +143,8 @@ function initMap() {
     };
     let map = new google.maps.Map(
         document.getElementById("map"), {
-            zoom: 3.5,
-            center: coordinates
+            zoom: 4.2,
+            center: {lat: 39, lng: -97}
         });
     for (let city of cities) {
         let marker = new google.maps.Marker({
