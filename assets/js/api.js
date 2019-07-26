@@ -46,7 +46,7 @@ function citySubmit() {
     });
 }
 
-citySubmit();
+citySubmit();  
 
 //click event for markers
 function latLngSubmit(marker) {
@@ -87,7 +87,7 @@ function handleSubmitCity (city) {
 }
 
 
-//get the lat, lng
+//handle the lat, lng
 function handleSubmit(lat, lng) {
     fetch(`https://app.climate.azavea.com/api/climate-data/${lat}/${lng}/RCP85?dataset=LOCA&years=2019,2020,2030,2040,2050,2060,2070,2080,2090,2100`, {
             headers: {
@@ -106,7 +106,7 @@ function handleSubmit(lat, lng) {
         })
 }
 
-
+//for getting the current day temperature information for all years
 function getCurrentDay() {
     let now = new Date();
     let start = new Date(now.getFullYear(), 0, 0);
@@ -116,7 +116,7 @@ function getCurrentDay() {
     return day
 }    
 
-
+//display the temperature results in the modal
 function displayData(data) {
     let day = getCurrentDay()
     let htmlString = ""
@@ -128,14 +128,14 @@ function displayData(data) {
 };
 
 
-//kelvin to fahrenheit
+//kelvin to fahrenheit conversion
 function conversion(kelvin) {
     const celsius = kelvin -273;
     let fahrenheit = Math.floor(celsius * (9/5) + 32);
     return fahrenheit
 };
 
-
+//for the google map
 function initMap() {
     let coordinates = {
         lat: cities[0].geometry.coordinates[1],
@@ -143,11 +143,10 @@ function initMap() {
     };
     let map = new google.maps.Map(
         document.getElementById("map"), {
-            zoom: 3,
+            zoom: 3.5,
             center: coordinates
         });
     for (let city of cities) {
-        //   console.log(city)
         let marker = new google.maps.Marker({
             position: {
                 lat: city.geometry.coordinates[1],
@@ -155,17 +154,17 @@ function initMap() {
             },
             map: map
         });
-        //  pinClick(marker); // pass each marker to the pin click function to set the listener
         latLngSubmit(marker);
     }
 
+    //for markers on map
     let marker = new google.maps.Marker({
         position: coordinates,
         map: map
     });
 };
 
-
+//initial fetch request
 fetch(`https://app.climate.azavea.com/api/climate-data/${cities[0].geometry.coordinates[1]}/${cities[0].geometry.coordinates[0]}/RCP85?dataset=LOCA`, {
         headers: {
             Authorization: "token 8428d0e3ca7a3f5862681ad13cb428d7e6f77a9d"
