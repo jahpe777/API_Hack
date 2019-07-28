@@ -11,6 +11,7 @@ function citySubmit() {
             return
         }
 
+        $('.tempCityStateContainer').empty()
         $('.tempTextContainer').empty()
         $(".loader-container").show()
         $(".tempModal").css("display", "flex");
@@ -55,6 +56,7 @@ function latLngSubmit(marker) {
         let longitude = event.latLng.lng();
         console.log(latitude)
         console.log(longitude)
+        $('.tempCityStateContainer').empty()
         $('.tempTextContainer').empty()
         $(".loader-container").show()
         $(".tempModal").css("display", "flex");
@@ -120,11 +122,17 @@ function getCurrentDay() {
 function displayData(data) {
     let day = getCurrentDay()
     let htmlString = ""
+    let htmlStringCityState = ""
     let keys = Object.keys(data.data)
     for (let key of keys) {
         htmlString += `<p>Temperature for ${key} | ${conversion(data.data[key].tasmax[day-1])}°F</p>`
     }
-    $(".tempTextContainer").append(htmlString)
+    for (let city of cities) {
+        htmlStringCityState += `<h4> ${city} | ${conversion(data.data[key].tasmax[day-1])}</h4>`
+    }
+    $(".tempCityStateContainer").append(htmlStringCityState);
+    $(".tempTextContainer").append(htmlString);
+    console.log(htmlStringCityState);
 };
 
 
@@ -144,7 +152,7 @@ function initMap() {
     let map = new google.maps.Map(
         document.getElementById("map"), {
             zoom: 4.2,
-            center: {lat: 39, lng: -97}
+            center: {lat: 39, lng: -96}
         });
     for (let city of cities) {
         let marker = new google.maps.Marker({
