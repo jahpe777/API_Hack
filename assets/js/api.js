@@ -127,10 +127,10 @@ function displayData(data) {
     for (let key of keys) {
         htmlString += `<p>Temperature for ${key} | ${conversion(data.data[key].tasmax[day-1])}°F</p>`
     }
-    for (let city of cities) {
+    /*for (let city of cities) {
         htmlStringCityState += `<h4> ${city} | ${conversion(data.data[key].tasmax[day-1])}</h4>`
     }
-    $(".tempCityStateContainer").append(htmlStringCityState);
+    $(".tempCityStateContainer").append(htmlStringCityState);*/
     $(".tempTextContainer").append(htmlString);
     console.log(htmlStringCityState);
 };
