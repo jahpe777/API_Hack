@@ -1,3 +1,5 @@
+let cityName = ''
+
 //function for submit
 function citySubmit() {
         let cityState = $(".city").val()
@@ -8,7 +10,7 @@ function citySubmit() {
             alert('Check city and state formatting')
             return
         }
-
+        cityName = cityState
         /*$('.tempCityStateContainer').empty()*/
         $('.tempTextContainer').empty()
         $(".loader-container").show()
@@ -41,6 +43,7 @@ function citySubmit() {
     };
     $(".close").click(function (event) {
         event.preventDefault();
+        cityName = ''
         $(".tempModal").css("display", "none");
     });
 
@@ -132,7 +135,11 @@ function getCurrentDay() {
 //display the temperature results in the modal
 function displayData(data) {
     let day = getCurrentDay()
-    let htmlString = ""
+    if (!cityName) {
+        let { coordinates } = data.feature.geometry
+        cityName = `${coordinates[0]}, ${coordinates[1]}`
+    }
+    let htmlString = `<p>${cityName}</p>`
     let htmlStringCityState = ""
     let keys = Object.keys(data.data)
     for (let key of keys) {
@@ -149,7 +156,7 @@ function displayData(data) {
 
 //kelvin to fahrenheit conversion
 function conversion(kelvin) {
-    const celsius = kelvin -273;
+    const celsius = kelvin - 273;
     let fahrenheit = Math.floor(celsius * (9/5) + 32);
     return fahrenheit
 };
@@ -182,6 +189,7 @@ function initMap() {
         map: map
     });
 };
+
 
 //initial fetch request
 fetch(`https://app.climate.azavea.com/api/climate-data/${cities[0].geometry.coordinates[1]}/${cities[0].geometry.coordinates[0]}/RCP85?dataset=LOCA`, {
