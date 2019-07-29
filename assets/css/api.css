@@ -105,10 +105,10 @@ main {
   }
 
 .tempModal {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     background-color: rgba(0, 0, 0, 0.7);
-    position: absolute;
+    position: fixed;
     top: 0;
     display: flex;
     justify-content: center;
@@ -229,12 +229,6 @@ main {
         left: .5rem;
       }
 
-    .tempModal {
-        position: absolute;
-        top: .5rem;
-        left: .5rem;
-    }
-
 }
 
 
@@ -274,11 +268,6 @@ main {
         left: 1rem;
       }
 
-    .tempModal {
-       width: 200%;
-       height: 200%;
-    }
-
 }
 
 
@@ -317,10 +306,5 @@ main {
         position: relative;
         left: 1.5rem;
       }
-
-    .tempModal {
-       width: 200%;
-       height: 200%;
-    }
-
+      
 }
