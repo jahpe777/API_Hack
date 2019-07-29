@@ -1,7 +1,5 @@
-//click event for submit
+//function for submit
 function citySubmit() {
-    $(".submit").click(function (event) {
-        event.preventDefault();
         let cityState = $(".city").val()
         let city = cityState.split(',')[0]
         let state = cityState.split(',')[1]
@@ -11,7 +9,7 @@ function citySubmit() {
             return
         }
 
-        $('.tempCityStateContainer').empty()
+        /*$('.tempCityStateContainer').empty()*/
         $('.tempTextContainer').empty()
         $(".loader-container").show()
         $(".tempModal").css("display", "flex");
@@ -40,14 +38,27 @@ function citySubmit() {
          }
 
          handleSubmitCity(found.id);
-    });
+    };
     $(".close").click(function (event) {
         event.preventDefault();
         $(".tempModal").css("display", "none");
     });
-}
 
-citySubmit();  
+
+//run submit via click
+$(".submit").click(function (event) {
+    event.preventDefault();
+    citySubmit();  
+});
+
+//run submit via keypress
+$(".city").keypress(function (event) {
+    if (event.keyCode == 13) {
+        event.preventDefault();
+        citySubmit();  
+    }
+});
+
 
 //click event for markers
 function latLngSubmit(marker) {
@@ -56,7 +67,7 @@ function latLngSubmit(marker) {
         let longitude = event.latLng.lng();
         console.log(latitude)
         console.log(longitude)
-        $('.tempCityStateContainer').empty()
+       /*$('.tempCityStateContainer').empty()*/
         $('.tempTextContainer').empty()
         $(".loader-container").show()
         $(".tempModal").css("display", "flex");
@@ -128,7 +139,7 @@ function displayData(data) {
         htmlString += `<p>Temperature for ${key} | ${conversion(data.data[key].tasmax[day-1])}°F</p>`
     }
     /*for (let city of cities) {
-        htmlStringCityState += `<h4> ${city} | ${conversion(data.data[key].tasmax[day-1])}</h4>`
+        htmlStringCityState += `<h4>${} | ${(data.data[key].tasmax[day-1])}</h4>`
     }
     $(".tempCityStateContainer").append(htmlStringCityState);*/
     $(".tempTextContainer").append(htmlString);

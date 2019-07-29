@@ -235,13 +235,13 @@ main {
 }
 
 
-@media screen and (min-width: 410px) and (max-width: 767px) {
+@media screen and (min-width: 374px) and (max-width: 767px) {
 
     header {
-        width: 70%;
+        width: 80%;
         font-size: 1.3rem;
         position: relative;
-        left: .5rem;
+        left: -.5rem;
     }
 
     .name {
@@ -265,10 +265,10 @@ main {
     }
 
     #map {
-        width: 130%;
+        width: 140%;
         height: 500px;
         position: relative;
-        left: .5rem;
+        left: 1rem;
       }
 
     .tempModal {
@@ -279,95 +279,45 @@ main {
 }
 
 
-@media screen and (min-width: 359px) and (max-width: 409px) {
+@media screen and (min-width: 1px) and (max-width: 373px) {
 
     header {
-        width: 400%;
-        font-size: 1.7rem;
-        position: relative;
-        left: -20rem;
-    }
-
-    .description {
-        width: 45rem;
-        font-size: 1rem;
-        position: relative;
-        left: 2.5rem;
-    }
-
-    .search-city {
-        position: relative;
-        left: 55%;
-    }
-
-    .submit {
-        position: relative;
-        left: 55%;
-    }
-
-    #map {
-        width: 200%;
-        height: 500px;
-        position: relative;
-        left: 2.5rem;
-      }
-
-      .tempModal {
-        position: absolute;
-        width: 230%;
-        height: 230%;
-       
-    }
-
-}
-
-@media screen and (min-width: 322px) and (max-width: 359px) {
-
-    header {
-        font-size: 1.5rem;
-        position: relative;
-        left: 1rem;
-    }
-
-    .submit {
-        position: relative;
-        left: 50%;
-    }
-
-    #map {
-        width: 195%;
-        height: 500px;
+        width: 90%;
+        font-size: 1.3rem;
         position: relative;
         left: .5rem;
-      }
+    }
 
-}
-
-
-@media screen and (max-width: 321px) {
-
-    header {
-        width: 250%;
-        font-size: 1.5rem;
+    .name {
+        width: 200%;
+    }
+    
+    .description {
+        width: 35rem;
         position: relative;
-        left: -2rem;
+        left: 0rem;
     }
 
     .search-city {
         position: relative;
-        left: 50%;
+        left: 30%;
     }
 
     .submit {
         position: relative;
-        left: 60%;
+        left: 35%;
     }
 
     #map {
-        width: 215%;
+        width: 160%;
         height: 500px;
         position: relative;
-        left: 1rem;
+        left: 1.5rem;
       }
+
+    .tempModal {
+       width: 200%;
+       height: 200%;
+    }
 
 }
