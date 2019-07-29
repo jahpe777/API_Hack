@@ -46,6 +46,10 @@ main {
     font-family: Helvetica, sans-serif;
 }
 
+.underline {
+    text-decoration: underline;
+}
+
 .search-city {
     background-color: black;
     border-radius: 5rem;
