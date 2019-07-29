@@ -1,3 +1,5 @@
+let cityName = "";
+
 //function for submit
 function citySubmit() {
         let cityState = $(".city").val()
@@ -8,8 +10,7 @@ function citySubmit() {
             alert('Check city and state formatting')
             return
         }
-
-        /*$('.tempCityStateContainer').empty()*/
+        cityName = cityState;
         $('.tempTextContainer').empty()
         $(".loader-container").show()
         $(".tempModal").css("display", "flex");
@@ -67,7 +68,6 @@ function latLngSubmit(marker) {
         let longitude = event.latLng.lng();
         console.log(latitude)
         console.log(longitude)
-       /*$('.tempCityStateContainer').empty()*/
         $('.tempTextContainer').empty()
         $(".loader-container").show()
         $(".tempModal").css("display", "flex");
@@ -132,18 +132,12 @@ function getCurrentDay() {
 //display the temperature results in the modal
 function displayData(data) {
     let day = getCurrentDay()
-    let htmlString = ""
-    let htmlStringCityState = ""
+    let htmlString = `<p>${cityName}</p>`
     let keys = Object.keys(data.data)
     for (let key of keys) {
         htmlString += `<p>Temperature for ${key} | ${conversion(data.data[key].tasmax[day-1])}°F</p>`
     }
-    /*for (let city of cities) {
-        htmlStringCityState += `<h4>${} | ${(data.data[key].tasmax[day-1])}</h4>`
-    }
-    $(".tempCityStateContainer").append(htmlStringCityState);*/
     $(".tempTextContainer").append(htmlString);
-    console.log(htmlStringCityState);
 };
 
 

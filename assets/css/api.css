@@ -133,22 +133,21 @@ main {
     transform: rotate(45deg);
     cursor: pointer;
     color: white;
-}
-
-.tempCityStateContainer p {
-    position: relative;
-    top: 5rem;
-    font-size: 2rem;
-    text-align: center;
-    color: white;
+    z-index: +1;
 }
 
 .tempTextContainer p {
     position: relative;
-    top: 5rem;
+    top: 1rem;
     font-size: 2rem;
     text-align: center;
     color: white;
+    line-height: 1.25em;
+}
+
+.modalCity {
+    width: 5rem;
+    color: red;
 }
 
 /* LOADER 2 */
