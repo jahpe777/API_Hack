@@ -9,7 +9,7 @@
 
 <h4>Landing Page:</h4>
 
-<img src = "/Users/jahpe777/Projects/API_Hack/landing_page.png"></img>
+<img src = "https://www.dropbox.com/s/dqgmzhpqbul32ft/landing_page.png?dl=0"></img>
 
 <h4>Results:</h4>
 
