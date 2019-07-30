@@ -9,7 +9,7 @@
 
 <h4>Landing Page:</h4>
 
-<img src = "landing_page.png"></img>
+<img src = "/Users/jahpe777/Projects/API_Hack/landing_page.png"></img>
 
 <h4>Results:</h4>
 
