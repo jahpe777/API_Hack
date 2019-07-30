@@ -9,7 +9,7 @@
 
 <h4>Landing Page:</h4>
 
-<p>login screen</p>
+<a href = "landing_page.png"></a>
 
 <h4>Results:</h4>
 
