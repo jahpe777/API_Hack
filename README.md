@@ -9,11 +9,11 @@
 
 <h4>Landing Page:</h4>
 
-![GitHub Logo](/Users/jahpe777/Projects/API_Hack/landing_page.png)
+<img src="/Users/jahpe777/Projects/API_Hack/landing_page.png">
 
 <h4>Results:</h4>
 
-<p>results</p>
+<img src="/Users/jahpe777/Projects/API_Hack/landing_page.png">
 
 <h2>Built With</h2>
 <h4>Front-End:</h4>
