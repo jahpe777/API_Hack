@@ -13,7 +13,7 @@
 
 <h4>Results:</h4>
 
-<img src="/Users/jahpe777/Projects/API_Hack/landing_page.png">
+<img src="/Users/jahpe777/Projects/API_Hack/results_page.png">
 
 <h2>Built With</h2>
 <h4>Front-End:</h4>
