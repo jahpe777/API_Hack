@@ -9,7 +9,7 @@
 
 <h4>Landing Page:</h4>
 
-![Landing Page](/Users/jahpe777/Projects/API_Hack/landing_page.png)
+![Landing Page](/API_Hack/landing_page.png)
 
 <h4>Results:</h4>
 
