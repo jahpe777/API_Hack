@@ -9,7 +9,7 @@
 
 <h4>Landing Page:</h4>
 
-<a href = "landing_page.png"></a>
+<img src = "landing_page.png"></img>
 
 <h4>Results:</h4>
 
