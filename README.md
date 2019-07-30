@@ -3,13 +3,13 @@
 <p>An app created to display the effects of climate change. Users can enter in a city or click one of the markers within a Google map to show projected max tempuratures within the continental United States.</p>
 
 <h2>Link</h2>
-<h3><a href = "https://jahpe777.github.io/API_Hack/">Climate Change App</a></h3>
+<h3><a href = "https://jahpe777.github.io/Climate_Change_App/">Climate Change App</a></h3>
 
 <h2>Screenshots</h2>
 
 <h4>Landing Page:</h4>
 
-<p>login screen</p>
+![GitHub Logo](/Users/jahpe777/Projects/API_Hack/landing_page.png)
 
 <h4>Results:</h4>
 
