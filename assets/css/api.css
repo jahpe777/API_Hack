@@ -96,7 +96,7 @@ main {
 }
 
 #map {
-    width: 50%;
+    width: 75%;
     height: 500px;
     margin-top: 4rem;
     margin-left: auto;
@@ -232,13 +232,25 @@ main {
 }
 
 
+@media screen and (min-width: 768px) and (max-width: 1385px) {
+
+    #map {
+        width: 80%;
+        height: 500px;
+        position: relative;
+        bottom: 3rem;
+      }
+
+}
+
+
 @media screen and (min-width: 374px) and (max-width: 767px) {
 
     header {
-        width: 80%;
+        width: 50%;
         font-size: 1.3rem;
         position: relative;
-        left: -.5rem;
+        left: 1rem;
     }
 
     .name {
@@ -246,26 +258,26 @@ main {
     }
     
     .description {
-        width: 35rem;
+        width: 30rem;
         position: relative;
         left: 0rem;
     }
 
     .search-city {
         position: relative;
-        left: 20%;
+        left: 0%;
     }
 
     .submit {
         position: relative;
-        left: 20%;
+        left: 0%;
     }
 
     #map {
-        width: 140%;
+        width: 80%;
         height: 500px;
         position: relative;
-        left: 1rem;
+        left: 0rem;
       }
 
 }
